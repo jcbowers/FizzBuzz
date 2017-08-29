@@ -17,9 +17,9 @@ namespace FizzBuzz
             {
                 UnityModule.RegisterTypes(container);
 
-                var factory = new PipelineOrchastratorFactory(args.FirstOrDefault(), container);
+                var orchastrator = container.Resolve<IPipelineSequenceOrchastrator>(args.FirstOrDefault() ?? "oo");
 
-                container.RegisterInstance(typeof(IPipelineSequenceOrchastrator), factory.Make());
+                container.RegisterInstance(typeof(IPipelineSequenceOrchastrator), orchastrator);
 
                 var presenter = container.Resolve<IPresenter>();
 

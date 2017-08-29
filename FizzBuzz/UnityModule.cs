@@ -14,7 +14,6 @@ namespace FizzBuzz
             container.RegisterType<IView, View>()
                 .RegisterType<IPresenter, Presenter>()
                 .RegisterType<IMapPipelineBuilder, MapPipelineBuilder>()
-                .RegisterType<IPipelineOrchastratorFactory, PipelineOrchastratorFactory>()
                 .RegisterType<IPipelineExecutionStrategy, PipelineExecutionStrategy>()
                 .RegisterType<IPipelineSequenceOrchastrator, FunctionalPipelineSequenceOrchastrator>("fp")
                 .RegisterType<IPipelineSequenceOrchastrator, PipelineSequenceOrchastrator>("oo");
