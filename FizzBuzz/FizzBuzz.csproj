@@ -78,6 +78,8 @@
     <Compile Include="Core\Strategies\MapStrategies.cs" />
     <Compile Include="Core\Strategies\PipelineExecutionStrategy.cs" />
     <Compile Include="Core\PipelineSequenceOrchastrator.cs" />
+    <Compile Include="Interfaces\INumberService.cs" />
+    <Compile Include="Service\NumberService.cs" />
     <Compile Include="UnityModule.cs" />
     <Compile Include="MVP\View.cs" />
   </ItemGroup>

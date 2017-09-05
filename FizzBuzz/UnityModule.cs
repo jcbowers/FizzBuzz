@@ -2,6 +2,7 @@
 using FizzBuzz.Core.Strategies;
 using FizzBuzz.Interfaces;
 using FizzBuzz.MVP;
+using FizzBuzz.Service;
 
 using Microsoft.Practices.Unity;
 
@@ -15,6 +16,7 @@ namespace FizzBuzz
                 .RegisterType<IPresenter, Presenter>()
                 .RegisterType<IMapPipelineBuilder, MapPipelineBuilder>()
                 .RegisterType<IPipelineExecutionStrategy, PipelineExecutionStrategy>()
+                .RegisterType<INumberService, NumberService>()
                 .RegisterType<IPipelineSequenceOrchastrator, FunctionalPipelineSequenceOrchastrator>("fp")
                 .RegisterType<IPipelineSequenceOrchastrator, PipelineSequenceOrchastrator>("oo");
         }
