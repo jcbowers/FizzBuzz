@@ -8,9 +8,9 @@ namespace FizzBuzz.Core
     {
         public Func<int, Tuple<int, string>> GetPipelineFunc()
         {
-            return new Func<int, Tuple<int, string>>(GetFizzBuzz)
-                    .TryTo(GetFizz)
+            return new Func<int, Tuple<int, string>>(GetFizz)
                     .TryTo(GetBuzz)
+                    .TryTo(GetFizzBuzz)
                     .TryTo(GetDefault);
         }
 
